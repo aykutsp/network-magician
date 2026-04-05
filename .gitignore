@@ -1,0 +1,14 @@
+/target
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.bak
+*.orig
+.vscode/
+.idea/
+.fleet/
+.zed/
+.history/
+.cursor/
+.claude/

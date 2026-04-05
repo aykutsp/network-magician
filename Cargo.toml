@@ -1,0 +1,24 @@
+[package]
+name = "network-magician"
+version = "0.1.0"
+edition = "2021"
+description = "CLI utility for scanning local hosts and selected service ports"
+license = "MIT"
+repository = "https://github.com/aykutsp/network-magician"
+readme = "README.md"
+keywords = ["network", "scanner", "port", "cli", "lan"]
+categories = ["command-line-utilities", "network-programming"]
+
+[dependencies]
+anyhow = "1"
+clap = { version = "4.5", features = ["derive"] }
+indicatif = "0.17"
+ipnet = "2.10"
+rayon = "1.10"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = true
