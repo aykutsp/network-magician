@@ -98,6 +98,8 @@ network-magician wifi scan [--json <PATH>]
 - an IPv4 range like `192.168.1.20-192.168.1.40`
 - a single host like `192.168.1.15`
 
+If you are not used to CIDR notation, the `/24` part is the network prefix length. `192.168.1.0/24` is the same network as subnet mask `255.255.255.0`, which usually means a local range covering `192.168.1.1` through `192.168.1.254`. A smaller block like `192.168.1.0/28` uses mask `255.255.255.240`, which narrows the scan to 16 addresses total, usually 14 usable host addresses.
+
 `--ports` and `--udp-ports` accept individual ports and ranges:
 
 ```bash
